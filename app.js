@@ -4,7 +4,7 @@ const app = express();
 const mongoose=require('mongoose');
 const path = require("path");
 
-//test
+//test2
 
 app.listen(8080);
 app.use(express.urlencoded({ extended: true }));
@@ -33,6 +33,9 @@ app.get("/", function (req, res) {
 
 app.get("/addparcel", function (req, res) {
   res.sendFile(path.join(__dirname, "views/addparcel.html"));
+});
+app.get("/getparcel", function (req, res) {
+  res.sendFile(path.join(__dirname, "views/getparcel.html"));
 });
 app.get("/delete", function (req, res) {
   res.sendFile(path.join(__dirname, "views/delete.html"));
