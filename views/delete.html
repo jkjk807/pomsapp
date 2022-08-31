@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Welcome to POMS App</h1>
+    <a href="/">Home</a>
+    <a href="/addparcel">Add Parcel</a>
+    <a href="/getparcel">List Parcel</a>
+    <a href="/delete">Delete Parcel</a>
+    <a href="/update">Update Parcel</a>
+    <hr />
+  </body>
+  <body>
+    <h2>Delete by ID</h2>
+    <form method="post" action="deletepost">
+      ID <input type="text" name="id" /><br />
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+  <body>
+    <h2>Delete by Sender</h2>
+    <form method="post" action="deletesender">
+      Sender <input type="text" name="sender" /><br />
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+  <body>
+    <h2>Delete by Sender and Address</h2>
+    <form method="post" action="deletepostbysenseraddress">
+      Sender <input type="text" name="sender" /><br />
+      Address <input type="text" name="address" /><br />
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+  <body>
+    <h2>Delete by Sender and Weight</h2>
+    <form method="post" action="deletepostbysenserweight">
+      Sender <input type="text" name="sender" /><br />
+      Weight <input type="number" name="weight" /><br />
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+</html>

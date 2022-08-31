@@ -1,0 +1,101 @@
+<html>
+  <head>
+
+    <link rel="stylesheet" href="style.css" />
+ 
+  </head>
+  <body>
+    <h1>Welcome to POMS App</h1>
+    <a href="/">Home</a>
+    <a href="/addparcel">Add Parcel</a>
+    <a href="/getparcel">List Parcel</a>
+    <a href="/delete">Delete Parcel</a>
+    <a href="/update">Update Parcel</a>
+    <hr />
+  </body>
+  <head>
+    <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #bdbdbdfe}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+    </style>
+      <head>
+
+        <link rel="stylesheet" href="style.css" />
+      </head>
+  
+  </head>
+  <body>
+    <h2>New Parcel</h2>
+    <form method="post" action="/addparcel">
+      <table>
+        <tr>
+          <td>Sender</td>
+          <td>
+            <input type="text" name="sender" />
+          </td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>
+            <input type="text" name="address" />
+          </td>
+        </tr>
+        <tr>
+          <td>Weight</td>
+          <td>
+            <input type="number" name="weight" />
+          </td>
+        </tr>
+        <tr>
+          <td>Fragile</td>
+          <td>
+            <select name="fragile" id="bool">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </td>
+        </tr>
+        <!-- <tr>
+          <td>Description</td>
+          <td>
+            <input type="text" name="description" />
+          </td>
+        </tr> -->
+        <!-- <td>Type of shipment</td> -->
+        <!-- <td>
+          <select name="type" id="shipment">
+            <option value="Standard">Standard</option>
+            <option value="Express">Express</option>
+          </select>
+        </td> -->
+      <!-- </tr> -->
+      <tr>
+        <td>Cost</td>
+        <td>
+          <input type="number" name="cost" />
+        </td>
+      </tr>
+        <tr>
+          <td>
+            <button submit>Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

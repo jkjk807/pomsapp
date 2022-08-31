@@ -1,0 +1,27 @@
+body {
+    background-color: bisque;
+    background-image: url("https://media.istockphoto.com/vectors/post-office-building-delivery-truck-and-mailbox-on-city-background-vector-id875028928?k=20&m=875028928&s=612x612&w=0&h=cGFKRldXJ5MRhoBJV_MGKO8-axIs32lyEq2pXgy0Nko=");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+a {
+    margin-right: 1cm;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}

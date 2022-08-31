@@ -1,0 +1,86 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" href="style.css" />
+     
+      </head>
+      <body>
+        <h1>Welcome to POMS App</h1>
+        <a href="/">Home</a>
+        <a href="/addparcel">Add Parcel</a>
+        <a href="/getparcel">List Parcel</a>
+        <a href="/delete">Delete Parcel</a>
+        <a href="/update">Update Parcel</a>
+        <hr />
+      </body>
+
+<head>
+    <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #bdbdbdfe}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+    </style>
+      <head>
+
+        <link rel="stylesheet" href="style.css" />
+      </head>
+    
+</head>
+<body>
+<h2>List by Sender</h2>
+<form method="post" action="getparcelsender">
+  Sender <input type="text" name="sender" /><br />
+  <button type="submit">Submit</button>
+</form>
+</body>
+
+<body>
+
+
+
+    </br>
+    <h3>The available parcels are:
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Sender</th>
+                <th>Address</th>
+                <th>Weight</th>
+                <th>Is Fragile?</th>
+            </tr>
+            <% for ( let i =0; i< PosDb.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= PosDb[i]._id %>
+                    </td>
+                    <td>
+                        <%= PosDb[i].sender %>
+                    </td>
+                    <td>
+                        <%= PosDb[i].address %>
+                    </td>
+                    <td>
+                        <%= PosDb[i].weight %>
+                    </td>
+                    <td>
+                        <%= PosDb[i].fragile %>
+                    </td>
+                </tr>
+                <% }%>
+     </table>
+    </h3>
+</body>
