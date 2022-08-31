@@ -34,9 +34,9 @@ app.get("/", function (req, res) {
 app.get("/addparcel", function (req, res) {
   res.sendFile(path.join(__dirname, "views/addparcel.html"));
 });
-app.get("/getparcel", function (req, res) {
-  res.sendFile(path.join(__dirname, "views/getparcel.html"));
-});
+// app.get("/getparcel", function (req, res) {
+//   res.sendFile(path.join(__dirname, "views/getparcel.html"));
+// });
 app.get("/delete", function (req, res) {
   res.sendFile(path.join(__dirname, "views/delete.html"));
 });
