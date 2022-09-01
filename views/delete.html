@@ -43,6 +43,19 @@
     </form>
   </body>
   <body>
+    <h2>Delete by Criterion</h2>
+    <form method="post" action="/deletewg">
+      <select name="delete" id="del">
+          <option value="weight">Weight</option>
+          <option value="address">Address</option>
+          <option value="fragile">Fragile</option>
+      </select>
+    <input type="text" name="criterion" /><br />
+    <button type="submit">Delete</button>
+    </form>
+</body>
+
+  <body>
     <h2>Delete by Sender and Address</h2>
     <form method="post" action="deletepostbysenseraddress">
       Sender <input type="text" name="sender" /><br />

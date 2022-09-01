@@ -28,6 +28,7 @@ mongoose.connect(url,function(err){
 
 
 app.get("/", function (req, res) {
+  console.log("hello")
   res.sendFile(path.join(__dirname, "views/index.html"));
 });
 
@@ -118,6 +119,36 @@ app.post("/deletepost", function (req, res) {
 
 
 });
+})
+
+
+app.post("/deletewg", function (req, res) {
+  let delinput = req.body.criterion;
+  let delcri=req.body.delete
+
+  switch(delcri){
+    case "weight":
+      Parcel.deleteMany({ weight: parseInt(delinput) }, function (err, doc) {
+        console.log(doc);
+        if (err) throw err;
+        res.sendFile(path.join(__dirname, "views/delete.html"));});
+    case "address":
+      Parcel.deleteMany({ address: delinput }, function (err, doc) {
+        console.log(doc);
+        if (err) throw err;
+        res.sendFile(path.join(__dirname, "views/delete.html"));});
+    case "fragile":
+      Parcel.deleteMany({ fragile: delinput }, function (err, doc) {
+        console.log(doc);
+        if (err) throw err;
+        res.sendFile(path.join(__dirname, "views/delete.html"));});
+
+  }
+
+
+
+
+res.sendFile(path.join(__dirname, "views/delete.html"));
 
 });
 
